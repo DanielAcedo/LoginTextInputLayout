@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.danielacedo.loginrelative.Login_Activity">
+
+    <TextView
+        android:layout_width="@dimen/widget_textView_width"
+        android:layout_height="wrap_content"
+        android:text="@string/txv_User"
+        android:layout_marginTop="@dimen/widget_margin_top"
+        android:id="@+id/txv_User"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_toRightOf="@id/txv_User"
+        android:layout_alignBaseline="@id/txv_User"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@id/txv_User"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/edt_User" />
+
+    <TextView
+        android:text="@string/txv_Pass"
+        android:layout_width="@dimen/widget_textView_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/txv_Pass"
+        android:layout_below="@id/txv_User"
+        android:layout_alignStart="@id/txv_User"
+        android:layout_alignLeft="@id/txv_User"
+        android:layout_marginTop="@dimen/widget_margin_top"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@id/edt_User"
+        android:layout_toRightOf="@id/txv_Pass"
+        android:layout_alignBaseline="@id/txv_Pass"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/txv_Pass"
+        android:id="@+id/edt_Pass" />
+
+    <CheckBox
+        android:text="@string/chb_Remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_Pass"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/widget_margin_top"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/chb_Remember" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chb_Remember"
+        android:layout_marginTop="@dimen/widget_margin_top"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:text="@android:string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            />
+
+        <Button
+            android:text="@android:string/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Ok"
+            style="?android:attr/buttonBarButtonStyle"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

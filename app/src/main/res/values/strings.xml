@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LoginRelative</string>
+    <string name="txv_User">User</string>
+    <string name="txv_Pass">Password</string>
+    <string name="chb_Remember">Remember</string>
+</resources>
