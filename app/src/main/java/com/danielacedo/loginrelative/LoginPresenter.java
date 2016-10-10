@@ -29,17 +29,20 @@ public class LoginPresenter implements ILoginMvp.Presenter {
     @Override
     public void validateCredentials(String user, String pass) {
 
-        if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)) {
-            view.setMessageError(((Context) view).getResources().getString(R.string.err_emptyData));
+        if(TextUtils.isEmpty(user)) {
+            view.setMessageError(((Context) view).getResources().getString(R.string.err_emptyData), R.id.edt_User);
+        }
+        else if(TextUtils.isEmpty(pass)){
+            view.setMessageError(((Context) view).getResources().getString(R.string.err_emptyData), R.id.edt_Pass);
         }
         else if(!Pattern.matches(".*[0-9].*", pass)){
-            view.setMessageError(((Context)view).getResources().getString(R.string.err_Password_Digit));
+            view.setMessageError(((Context)view).getResources().getString(R.string.err_Password_Digit), R.id.edt_Pass);
         }
         else if(!Pattern.matches(".*[a-z].*",pass) || !Pattern.matches(".*[A-Z].*",pass)){
-            view.setMessageError(((Context)view).getResources().getString(R.string.err_Password_UpperLowerCase));
+            view.setMessageError(((Context)view).getResources().getString(R.string.err_Password_UpperLowerCase), R.id.edt_Pass);
         }
         else if(pass.length()<8){
-            view.setMessageError(((Context)view).getResources().getString(R.string.err_Password_Length));
+            view.setMessageError(((Context)view).getResources().getString(R.string.err_Password_Length), R.id.edt_Pass);
         }else{
             //Save the user in the Application class
             ((Login_Application)((Context)view).getApplicationContext()).setUser(new User(user, pass));

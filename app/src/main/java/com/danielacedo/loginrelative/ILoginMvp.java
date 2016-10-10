@@ -26,7 +26,7 @@ public interface ILoginMvp {
          * @param messageError The message to be displayed
          * @author Daniel Acedo Calderón
          */
-        public void setMessageError(String messageError);
+        public void setMessageError(String messageError, int view);
     }
 
     /**
